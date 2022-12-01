@@ -4,8 +4,8 @@ if __name__ == "__main__":
     from sys import argv, exit
 
     if len(argv) - 1 != 3:
-        if len(argv) - 1 != 3:
-            exit(1)
+        print("Usage: {} <a> <operator> <b>".format(argv[0]))
+        exit(1)
 
     elif argv[2] == "+":
         print("{} {} {} = {}".format(argv[1],
