@@ -2,8 +2,10 @@
 if __name__ == "__main__":
     import sys
 
-    x = 0
-
-    for i in range(len(sys.argv) - 1):
-        arg += int(sys.argv[i - 1])
-        print("{}".format(x))
+    total = 0
+    if len(sys.argv) == 1:
+        print(total)
+    else:
+        for i in range(len(sys.argv) - 1):
+            total += int(sys.argv[i - 1])
+            print("{}".format(total))
