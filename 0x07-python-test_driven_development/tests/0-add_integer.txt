@@ -1,5 +1,5 @@
 # The '0-add_integer' module
--------------------------
+============================
 
 ``add_integer(a, b=98)`` returns the addition
 of two numbers
@@ -58,21 +58,21 @@ Check for negative float and negative integer:
 
 Check for integer and string:
     >>> add_integer(4, "School")
-    Traceback(most recent call last):
+    Traceback (most recent call last):
         ...
-        TypeError: b must be an integer
+    TypeError: b must be an integer
 
 Check for None:
     >>> add_integer(None)
-    Traceback(most recent call last):
+    Traceback (most recent call last):
         ...
-        TypeError: a must be an integer
+    TypeError: a must be an integer
 
 Check for strings:
     >>> add_integer("lol", "damn")
-    Traceback(most recent call last):
+    Traceback (most recent call last):
         ...
-        TypeError: a must be an integer
+    TypeError: a must be an integer
 
 Check for module documentation:
     >>> len(__import__("0-add_integer").__doc__) > 1
@@ -86,30 +86,30 @@ Check infinity:
     >>> add_integer(float('inf'), 1)
     Traceback (most recent call last):
         ...
-        TypeError: a must be an integer
+    TypeError: a must be an integer
 
     >>> add_integer(2, float("inf"))
     Traceback (most recent call last):
         ...
-        TypeError: b must be an integer
+    TypeError: b must be an integer
 
     >>> add_integer(float("-inf"), 56)
     Traceback (most recent call last):
         ...
-        TypeError: a must be an integer
+    TypeError: a must be an integer
 
     >>> add_integer(5, float("-inf"))
     Traceback (most recent call last):
         ...
-        TypeError: b must be an integer
+    TypeError: b must be an integer
 
 Check for nan:
     >>> add_integer(float('nan'), 2)
     Traceback (most recent call last):
         ...
-        TypeError: a must be an integer
+    TypeError: a must be an integer
 
     >>> add_integer(4, float('nan'))
     Traceback (most recent call last):
         ...
-        TypeError: b must be an integer
+    TypeError: b must be an integer
