@@ -111,14 +111,22 @@ class Rectangle(Base):
                 index += 1
                 if index == 1:
                     self.id = argument
-                if index == 2:
+                elif index == 2:
                     self.__width = argument
-                if index == 3:
+                elif index == 3:
                     self.__height = argument
-                if index == 4:
+                elif index == 4:
                     self.__x = argument
-                if index == 5:
+                elif index == 5:
                     self.__y = argument
         else:
             for key, values in kwargs.items():
                 setattr(self, key, values)
+
+    def to_dictionary(self):
+        """ returns the dictionary representation of a Rectangle
+        """
+        dictionary = {}
+        for index in ["id", "width", "height", "x", "y"]:
+            dictionary[index] = getattr(self, index)
+        return dictionary
